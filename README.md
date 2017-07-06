@@ -39,7 +39,7 @@ var util = require('util')
 
 function MyError (myprop) {
   Error.call(this, this.message = util.format('oh no! my error happened, here are some details: %s', myprop))
-  Error.captureCallStack(this, MyError)
+  Error.captureStackTrace(this, MyError)
   this.myprop = myprop
 }
 
